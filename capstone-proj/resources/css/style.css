@@ -1,0 +1,572 @@
+/* ITEMS TO ADDRESS:
+-Responsive design of page
+*/
+* {
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: 'Muli', sans-serif;
+}
+
+h1 {
+    display: block;
+    font-size: 2rem;
+    margin-top: 0.67rem;
+    margin-bottom: 0.67rem;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5rem;
+    margin-top: 0.83rem;
+    margin-bottom: 0.83rem;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+h4 {
+    display: block;
+    font-size: 1rem;
+    margin-top: 1.33rem;
+    margin-bottom: 1.33rem;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+h5 {
+    display: block;
+    font-size: .83rem;
+    margin-top: 1.67rem;
+    margin-bottom: 1.67rem;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+h6 {
+    display: block;
+    font-size: .67rem;
+    margin-top: 2.33rem;
+    margin-bottom: 2.33rem;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .mobile {
+  display: none;
+}
+
+.title {
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-desktop {
+  display: flex;
+  align-items: center;
+}
+
+.nav-items li {
+  list-style-type: none;
+  background-color: white;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.nav-items ul {
+display: flex;
+}
+
+ul {
+  padding: 0px;
+}
+
+.nav-items li a {
+  color: black;
+}
+
+h1 span {
+  color: black;
+}
+
+.title h1 {
+  color: grey;
+}
+
+.course-image :hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+/* MOBILE Nav */
+@media only screen and (max-width: 760px) {
+  header .nav-desktop {
+    display: none;
+  }
+
+  header .mobile {
+    display: block;
+    width: 100%;
+  }
+
+  header .title {
+    display: none;
+  }
+
+  header .mobile ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  header .mobile li {
+    padding: 0;
+  }
+
+  header {
+    height: 64px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.banner {
+  display: flex;
+  background-color: #cfd0cd;
+}
+
+.banner-left {
+  display: flex;
+  width: 60%;
+}
+
+.banner-img {
+  padding: 32px 24px;
+  display: flex;
+  height: 500px;
+  width: 800px;
+}
+
+.banner-img img {
+  width: 100%;
+}
+
+.banner-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  width: 40%;
+}
+
+.banner-content {
+  z-index: 10;
+  width: 55%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.banner-btn {
+  background-color: black;
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.banner-btn span {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.banner-btn a {
+  color: white;
+}
+
+/* MOBILE Banner */
+
+@media only screen and (max-width: 760px) {
+  .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30rem;
+  }
+
+  .banner-left {
+    width: 100%;
+    height: 18rem;
+  }
+
+  .banner-img {
+  padding: 0;
+  }
+
+  .banner-left img {
+    height: auto;
+    width: 100%;
+  }
+
+  .banner-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20rem;
+  }
+
+  .banner-content {
+    width: 100%;
+    padding: 32px 16px;
+    height: auto;
+  }
+
+  .banner-content h2 {
+    color: #5d5e65;
+  }
+}
+
+/* Desktop Info Container */
+.info-container {
+  display: flex;
+}
+
+.info-left {
+  padding: 32px 24px;
+  width: 60%;
+}
+
+.info-main-img img {
+  display: flex;
+  width: 100%;
+}
+
+.info-right {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.feature {
+  display: inline-flex;
+  border: 1px solid #cfd0cd;
+  justify-content: center;
+  align-items: center;
+}
+
+.orientation-img {
+  width: 35%;
+  height: auto;
+  padding: 32px 16px 16px 16px;
+}
+
+.orientation-img img {
+  width: 100%;
+}
+
+.feature-img {
+  padding: 16px 16px;
+  width: 35%;
+  height: auto;
+}
+
+.feature-img img {
+  width: 100%;
+}
+
+.feature-txt {
+  width: 65%;
+}
+
+.guest-lecture {
+  display: inline-flex;
+  border: 1px solid #cfd0cd;
+  justify-content: center;
+  align-items: center;
+  background-color: #cfd0cd
+}
+
+
+/* MOBILE Information Container */
+@media only screen and (max-width: 760px) {
+  .info-left {
+    display: none;
+  }
+
+  .info-right {
+    width: 100%;
+  }
+
+  .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 0;
+  }
+
+  .guest-lecture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 32px 0;
+  }
+
+  .feature-img, .orientation-img {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .feature-img img, .orientation-img img {
+    display: block;
+    height: 15rem;
+    margin:-15% 0;
+  }
+
+  .feature-txt {
+    width: 90%;
+  }
+}
+
+/* Start Learning */
+.learning-container {
+  background-color: #cfd0cd;
+}
+
+.learning-title {
+  display: flex;
+  justify-content: center;
+  padding: 32px 0px 32px 0px;
+}
+
+.tiles-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 72px 32px 72px;
+}
+
+.course-tile {
+  padding-bottom: 32px;
+  background-color: white;
+  width: 30%;
+  margin: 16px 16px;
+}
+
+.course-image img {
+  height: auto;
+  width: 100%
+}
+
+.course-title {
+  padding-top: 16px;
+}
+
+
+.courses {
+  text-transform: uppercase;
+  padding: 8px 0;
+  color: #5d5e65;
+}
+
+.course-description {
+  padding-bottom: 24px;
+  color: #5d5e65;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.course-title, .courses, .course-description {
+  padding-left: 16px;
+}
+
+/* MOBILE Start Learning Container */
+@media only screen and (max-width: 760px) {
+  .learning-container {
+    background-color: white;
+  }
+
+  .learning-title h1 {
+    color: #5d5e65;
+  }
+
+  .tiles-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+
+  .course-tile {
+    width: 90%;
+    background-color: #cfd0cd;
+    margin: 8px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .course-image img {
+    display: none;
+  }
+
+
+
+  .course-title {
+    margin: 0;
+    color: #5d5e65;
+  }
+
+  .course-description {
+    display: none;
+  }
+
+  .courses {
+    display: none;
+  }
+}
+
+/* Thesis Exhibit Container */
+.thesis-title {
+  display: flex;
+  justify-content: center;
+  padding: 32px 0px 32px 0px;
+}
+
+.thesis-content {
+ display: flex;
+}
+
+.thesis-left {
+  padding: 0 24px 0 24px;
+  width: 60%;
+}
+
+.thesis-vid video {
+  display: flex;
+  width: 100%;
+}
+
+.thesis-vid-story {
+  padding-bottom: 32px;
+}
+
+.thesis-right {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.fisma {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #cfd0cd;
+}
+
+.fisma-img {
+  width: 35%;
+  height: auto;
+  padding: 16px 16px;
+}
+
+.fisma-img img {
+  width: 100%;
+}
+
+.fisma-content {
+  width: 65%;
+}
+
+.now-then-story {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.now-then-img {
+  width: 35%;
+  height: auto;
+  padding: 16px 16px;
+}
+
+.now-then-img img {
+  width: 100%;
+}
+
+.now-then-content {
+  width: 65%;
+}
+
+/* MOBILE Thesis Exhibit & Footer Container */
+@media only screen and (max-width: 760px) {
+    .thesis-left {
+      width: 100%;
+      padding: 0;
+    }
+
+    .thesis-vid video {
+      width: 100%;
+      height: auto;
+      padding-bottom: 24px;
+    }
+
+    .thesis-vid-story {
+      display: none;
+    }
+
+    .thesis-right {
+      display: none;
+    }
+
+    .terms {
+      display: none;
+    }
+
+    .copyright {
+      padding: 16px 0;
+    }
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid #cfd0cd;
+  display: flex;
+}
+
+.copyright {
+  padding-top: 16px;
+  padding-left: 24px;
+  flex-grow: 1;
+}
+
+.terms {
+  padding-top: 16px;
+  padding-right: 24px;
+}
+
+.terms li {
+  display: inline;
+}
